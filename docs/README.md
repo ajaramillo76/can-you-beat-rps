@@ -8,6 +8,7 @@ It's a rock, paper, scissors game against the computer.  As the game goes along,
 * Gamblers
 * Anyone who thinks they can beat a computer
 * Kids
+### [User Stories](user-stories.md)
 
 ## External services
 
