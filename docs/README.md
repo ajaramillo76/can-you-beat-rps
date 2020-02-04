@@ -15,3 +15,7 @@ It's a rock, paper, scissors game against the computer.  As the game goes along,
 * TensorFlow Lite (for machine learning) - "Stretch goal"
 * Android Neural Network API
 * Google sign in
+
+## Design Documentation
+
+### [Entity-Relationship Diagram](erd.md)
