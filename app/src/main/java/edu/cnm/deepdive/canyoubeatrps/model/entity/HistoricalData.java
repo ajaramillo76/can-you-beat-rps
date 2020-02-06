@@ -17,7 +17,7 @@ import androidx.room.PrimaryKey;
 )
 public class HistoricalData {
 
-  @ColumnInfo(name = "historical_id")
+  @ColumnInfo(name = "historicaldata_id")
   @PrimaryKey(autoGenerate = true)
   private long id;
 
