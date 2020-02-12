@@ -32,6 +32,6 @@ public interface UserDao {
   LiveData<List<User>> select();
 
   @Query("SELECT * FROM User WHERE email_id = :email")
-  Maybe<User> select(Email email);
+  Maybe<User> select(String email);
 
 }
