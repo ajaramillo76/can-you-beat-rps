@@ -24,22 +24,22 @@ public class Game {
   @ColumnInfo(name = "user_id", index = true)
   private long userId;
 
-  @ColumnInfo(name = "win", index = true)
-  private boolean win;
+  @ColumnInfo(index = true)
+  private int win;
 
-  @ColumnInfo(name = "lose", index = true)
-  private boolean lose;
+  @ColumnInfo(index = true)
+  private int lose;
 
-  @ColumnInfo(name = "draw", index = true)
-  private boolean draw;
+  @ColumnInfo(index = true)
+  private int draw;
 
-  @ColumnInfo(name = "rock", index = true)
+  @ColumnInfo(index = true)
   private int rock;
 
-  @ColumnInfo(name = "paper", index = true)
+  @ColumnInfo(index = true)
   private int paper;
 
-  @ColumnInfo(name = "scissors", index = true)
+  @ColumnInfo(index = true)
   private int scissors;
 
   public long getId() {
@@ -58,27 +58,27 @@ public class Game {
     this.userId = userId;
   }
 
-  public boolean isWin() {
+  public int getWin() {
     return win;
   }
 
-  public void setWin(boolean win) {
+  public void setWin(int win) {
     this.win = win;
   }
 
-  public boolean isLose() {
+  public int getLose() {
     return lose;
   }
 
-  public void setLose(boolean lose) {
+  public void setLose(int lose) {
     this.lose = lose;
   }
 
-  public boolean isDraw() {
+  public int getDraw() {
     return draw;
   }
 
-  public void setDraw(boolean draw) {
+  public void setDraw(int draw) {
     this.draw = draw;
   }
 

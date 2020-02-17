@@ -18,7 +18,6 @@ import edu.cnm.deepdive.canyoubeatrps.model.entity.User;
     version = 1,
     exportSchema = true
 )
-@TypeConverters({})
 public abstract class CanYouBeatRpsDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "canYouBeatRps_db";
@@ -39,10 +38,6 @@ public abstract class CanYouBeatRpsDatabase extends RoomDatabase {
 
     private static final CanYouBeatRpsDatabase INSTANCE = Room.databaseBuilder(
         context, CanYouBeatRpsDatabase.class, DB_NAME).build();
-  }
-
-  public static class Converters {
-
   }
 
 }
