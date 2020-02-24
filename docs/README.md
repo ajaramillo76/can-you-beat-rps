@@ -26,3 +26,7 @@ It's a rock, paper, scissors game against the computer.  As the game goes along,
 ### [Wireframe Diagram](wireframe.md)
 
 ### [Entity-Relationship Diagram](erd.md)
+
+## Implementaton
+
+### [Data definition language (DDL)](ddl.md)

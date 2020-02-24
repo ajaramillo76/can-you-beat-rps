@@ -12,6 +12,6 @@ public class CanYouBeatRpsApplication extends Application {
     Stetho.initializeWithDefaults(this);
 
     CanYouBeatRpsDatabase.setContext(this);
-    new Thread(() -> CanYouBeatRpsDatabase.getInstance().getUserDao().delete()).start();
+    new Thread (() -> CanYouBeatRpsDatabase.getInstance().getUserDao().delete()).start();
   }
 }
