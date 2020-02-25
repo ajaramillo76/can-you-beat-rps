@@ -24,4 +24,6 @@
 
 ## Repository Classes
 
-* ### [Can You Beat RPS Repository](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/service/CanYouBeatRpsRepository.java)
+* ### [Game Repository](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/service/GameRepository.java)
+
+* ### [Historical Data Repository](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/service/HistoricalDataRepository.java)
