@@ -2,7 +2,7 @@
 
 ### [Data definition language (DDL)](ddl.md)
 
-## Entity Class
+## Entity Classes
 
 * ### [Game entity](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/model/entity/Game.java)
 
@@ -10,7 +10,7 @@
 
 * ### [User entity](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/model/entity/User.java)
 
-## Dao Class
+## Dao Interfaces
 
 * ### [Game Dao](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/model/dao/GameDao.java)
 
@@ -22,6 +22,6 @@
 
 * ### [Can You Beat RPS Database](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/service/CanYouBeatRpsDatabase.java)
 
-## Repository Class
+## Repository Classes
 
-* ### [Can You Beat RPS Repository]()
+* ### [Can You Beat RPS Repository](https://github.com/ajaramillo76/can-you-beat-rps/blob/master/app/src/main/java/edu/cnm/deepdive/canyoubeatrps/service/CanYouBeatRpsRepository.java)

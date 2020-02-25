@@ -26,8 +26,8 @@ public interface GameDao {
   @Delete
   int delete(Game games);
 
-  @Query("SELECT * FROM Game ORDER BY game_id")
-  LiveData<List<Game>> select();
+  @Query("SELECT * FROM Game WHERE user_id = :userId ORDER BY game_id")
+  LiveData<List<Game>> select(long userId);
 
 
 
