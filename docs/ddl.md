@@ -1,6 +1,6 @@
 # SQL data definition language (DDL)
 
-```sqlite
+```SQLite
 CREATE TABLE IF NOT EXISTS `User`
 (
     `user_id`  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,

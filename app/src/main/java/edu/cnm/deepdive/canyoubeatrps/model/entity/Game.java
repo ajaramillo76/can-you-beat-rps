@@ -6,14 +6,12 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 @Entity(
-    foreignKeys = {
-        @ForeignKey(
+    foreignKeys = @ForeignKey(
             entity = User.class,
             parentColumns = "user_id",
             childColumns = "user_id",
             onDelete = ForeignKey.CASCADE
         )
-    }
 )
 public class Game {
 
@@ -25,22 +23,22 @@ public class Game {
   private long userId;
 
   @ColumnInfo(index = true)
-  private int win;
+  private boolean win;
 
   @ColumnInfo(index = true)
-  private int lose;
+  private boolean lose;
 
   @ColumnInfo(index = true)
-  private int draw;
+  private boolean draw;
 
   @ColumnInfo(index = true)
-  private int rock;
+  private boolean rock;
 
   @ColumnInfo(index = true)
-  private int paper;
+  private boolean paper;
 
   @ColumnInfo(index = true)
-  private int scissors;
+  private boolean scissors;
 
   public long getId() {
     return id;
@@ -58,51 +56,51 @@ public class Game {
     this.userId = userId;
   }
 
-  public int getWin() {
+  public boolean isWin() {
     return win;
   }
 
-  public void setWin(int win) {
+  public void setWin(boolean win) {
     this.win = win;
   }
 
-  public int getLose() {
+  public boolean isLose() {
     return lose;
   }
 
-  public void setLose(int lose) {
+  public void setLose(boolean lose) {
     this.lose = lose;
   }
 
-  public int getDraw() {
+  public boolean isDraw() {
     return draw;
   }
 
-  public void setDraw(int draw) {
+  public void setDraw(boolean draw) {
     this.draw = draw;
   }
 
-  public int getRock() {
+  public boolean isRock() {
     return rock;
   }
 
-  public void setRock(int rock) {
+  public void setRock(boolean rock) {
     this.rock = rock;
   }
 
-  public int getPaper() {
+  public boolean isPaper() {
     return paper;
   }
 
-  public void setPaper(int paper) {
+  public void setPaper(boolean paper) {
     this.paper = paper;
   }
 
-  public int getScissors() {
+  public boolean isScissors() {
     return scissors;
   }
 
-  public void setScissors(int scissors) {
+  public void setScissors(boolean scissors) {
     this.scissors = scissors;
   }
 }

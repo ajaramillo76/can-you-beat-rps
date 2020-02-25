@@ -8,7 +8,7 @@ It's a rock, paper, scissors game against the computer.  As the game goes along,
 * Gamblers
 * Anyone who thinks they can beat a computer
 * Kids
-### [User Stories](user-stories.md)
+* ### [User Stories](user-stories.md)
 
 ## External services
 
@@ -23,10 +23,9 @@ It's a rock, paper, scissors game against the computer.  As the game goes along,
 
 ## Design Documentation
 
-### [Wireframe Diagram](wireframe.md)
+* ### [Wireframe Diagram](wireframe.md)
 
-### [Entity-Relationship Diagram](erd.md)
+* ### [Entity-Relationship Diagram](erd.md)
 
-## Implementaton
+## [Data Model Implementaton Page](data_model_implementation.md)
 
-### [Data definition language (DDL)](ddl.md)
