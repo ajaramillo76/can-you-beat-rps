@@ -1,6 +1,6 @@
-## Data Model Implementation
+# Data Model Implementation
 
-### [Data definition language (DDL)](ddl.md)
+## [Data definition language (DDL)](ddl.md)
 
 ## Entity Classes
 

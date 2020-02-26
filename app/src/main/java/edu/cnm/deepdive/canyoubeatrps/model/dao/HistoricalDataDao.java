@@ -16,15 +16,15 @@ public interface HistoricalDataDao {
   long insert(HistoricalData historicalData);
 
   @Insert
-  List<Long> insert(Collection<HistoricalData> historicalDatas);
+  List<Long> insert(Collection<HistoricalData> historicalData);
 
   @Update
   int update(HistoricalData historicalData);
 
   @Delete
-  int delete(HistoricalData... historicalDatas);
+  int delete(HistoricalData... historicalData);
 
-  @Query("SELECT * FROM HistoricalData ORDER BY historicaldata_id")
-  List<HistoricalData> select();
+  @Query("SELECT * FROM HistoricalData WHERE user_id = :userId ORDER BY historicaldata_id")
+  List<HistoricalData> select(long userId);
 
 }

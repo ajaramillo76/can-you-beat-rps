@@ -25,13 +25,13 @@ public class HistoricalData {
   private long userId;
 
   @ColumnInfo(name = "wins", index = true)
-  private boolean wins;
+  private int wins;
 
   @ColumnInfo(name = "losses", index = true)
-  private boolean losses;
+  private int losses;
 
-  @ColumnInfo(name = "draw", index = true)
-  private boolean draw;
+  @ColumnInfo(name = "draws", index = true)
+  private int draws;
 
   @ColumnInfo(name = "rock", index = true)
   private int rock;
@@ -58,28 +58,28 @@ public class HistoricalData {
     this.userId = userId;
   }
 
-  public boolean isWins() {
+  public int getWins() {
     return wins;
   }
 
-  public void setWins(boolean wins) {
+  public void setWins(int wins) {
     this.wins = wins;
   }
 
-  public boolean isLosses() {
+  public int getLosses() {
     return losses;
   }
 
-  public void setLosses(boolean losses) {
+  public void setLosses(int losses) {
     this.losses = losses;
   }
 
-  public boolean isDraw() {
-    return draw;
+  public int getDraws() {
+    return draws;
   }
 
-  public void setDraw(boolean draw) {
-    this.draw = draw;
+  public void setDraws(int draws) {
+    this.draws = draws;
   }
 
   public int getRock() {
