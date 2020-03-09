@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "f80884dcb0c975d63db6709bef24da9e",
+    "identityHash": "a5ce0a5c85aea414da41c33385946d55",
     "entities": [
       {
         "tableName": "User",
@@ -172,7 +172,7 @@
       },
       {
         "tableName": "HistoricalData",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`historicaldata_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `wins` INTEGER NOT NULL, `losses` INTEGER NOT NULL, `draw` INTEGER NOT NULL, `rock` INTEGER NOT NULL, `paper` INTEGER NOT NULL, `scissors` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`historicaldata_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `wins` INTEGER NOT NULL, `losses` INTEGER NOT NULL, `draws` INTEGER NOT NULL, `rock` INTEGER NOT NULL, `paper` INTEGER NOT NULL, `scissors` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -199,8 +199,8 @@
             "notNull": true
           },
           {
-            "fieldPath": "draw",
-            "columnName": "draw",
+            "fieldPath": "draws",
+            "columnName": "draws",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -255,12 +255,12 @@
             "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_losses` ON `${TABLE_NAME}` (`losses`)"
           },
           {
-            "name": "index_HistoricalData_draw",
+            "name": "index_HistoricalData_draws",
             "unique": false,
             "columnNames": [
-              "draw"
+              "draws"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_draw` ON `${TABLE_NAME}` (`draw`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_draws` ON `${TABLE_NAME}` (`draws`)"
           },
           {
             "name": "index_HistoricalData_rock",
@@ -305,7 +305,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f80884dcb0c975d63db6709bef24da9e')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a5ce0a5c85aea414da41c33385946d55')"
     ]
   }
 }
