@@ -1,6 +1,7 @@
-package edu.cnm.deepdive.canyoubeatrps.service;
+package edu.cnm.deepdive.canyoubeatrps.model.repository;
 
 import android.app.Application;
+import edu.cnm.deepdive.canyoubeatrps.service.CanYouBeatRpsDatabase;
 
 public class GameRepository {
 

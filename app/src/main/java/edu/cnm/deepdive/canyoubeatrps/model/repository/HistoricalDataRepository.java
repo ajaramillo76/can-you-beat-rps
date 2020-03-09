@@ -1,10 +1,7 @@
-package edu.cnm.deepdive.canyoubeatrps.service;
+package edu.cnm.deepdive.canyoubeatrps.model.repository;
 
 import android.app.Application;
-import edu.cnm.deepdive.canyoubeatrps.model.dao.GameDao;
-import edu.cnm.deepdive.canyoubeatrps.model.entity.Game;
-import edu.cnm.deepdive.canyoubeatrps.model.entity.HistoricalData;
-import io.reactivex.schedulers.Schedulers;
+import edu.cnm.deepdive.canyoubeatrps.service.CanYouBeatRpsDatabase;
 
 public class HistoricalDataRepository {
 
