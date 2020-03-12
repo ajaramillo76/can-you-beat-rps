@@ -4,8 +4,6 @@ import android.app.Application;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverter;
-import androidx.room.TypeConverters;
 import edu.cnm.deepdive.canyoubeatrps.model.dao.GameDao;
 import edu.cnm.deepdive.canyoubeatrps.model.dao.HistoricalDataDao;
 import edu.cnm.deepdive.canyoubeatrps.model.dao.UserDao;
