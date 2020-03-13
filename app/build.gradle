@@ -67,6 +67,9 @@ dependencies {
     // Google Sign-In dependency
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
 
+    // Tensor Flow lite dependency
+    implementation 'org.tensorflow:tensorflow-lite:2.0.0'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

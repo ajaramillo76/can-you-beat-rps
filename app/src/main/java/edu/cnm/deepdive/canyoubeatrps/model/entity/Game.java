@@ -19,7 +19,7 @@ public class Game {
   @PrimaryKey(autoGenerate = true)
   private long id;
 
-  @ColumnInfo(name = "user_id", index = true)
+  @ColumnInfo(index = true)
   private long userId;
 
   @ColumnInfo(index = true)
@@ -30,15 +30,6 @@ public class Game {
 
   @ColumnInfo(index = true)
   private boolean draw;
-
-  @ColumnInfo(index = true)
-  private boolean rock;
-
-  @ColumnInfo(index = true)
-  private boolean paper;
-
-  @ColumnInfo(index = true)
-  private boolean scissors;
 
   public long getId() {
     return id;
@@ -80,27 +71,4 @@ public class Game {
     this.draw = draw;
   }
 
-  public boolean isRock() {
-    return rock;
-  }
-
-  public void setRock(boolean rock) {
-    this.rock = rock;
-  }
-
-  public boolean isPaper() {
-    return paper;
-  }
-
-  public void setPaper(boolean paper) {
-    this.paper = paper;
-  }
-
-  public boolean isScissors() {
-    return scissors;
-  }
-
-  public void setScissors(boolean scissors) {
-    this.scissors = scissors;
-  }
 }

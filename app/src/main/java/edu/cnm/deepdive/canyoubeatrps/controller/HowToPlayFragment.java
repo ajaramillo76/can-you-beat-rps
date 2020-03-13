@@ -1,5 +1,7 @@
 package edu.cnm.deepdive.canyoubeatrps.controller;
 
-public class HowToPlayFragment {
+import androidx.fragment.app.Fragment;
+
+public class HowToPlayFragment extends Fragment {
 
 }
