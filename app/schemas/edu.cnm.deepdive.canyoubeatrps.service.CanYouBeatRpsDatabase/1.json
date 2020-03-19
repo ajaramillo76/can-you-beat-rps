@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "a5ce0a5c85aea414da41c33385946d55",
+    "identityHash": "81bcfb359aae9532395ab28f438e5328",
     "entities": [
       {
         "tableName": "User",
@@ -41,7 +41,7 @@
       },
       {
         "tableName": "Game",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `win` INTEGER NOT NULL, `lose` INTEGER NOT NULL, `draw` INTEGER NOT NULL, `rock` INTEGER NOT NULL, `paper` INTEGER NOT NULL, `scissors` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `outcome` INTEGER NOT NULL, `player` INTEGER NOT NULL, `computer` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -56,38 +56,26 @@
             "notNull": true
           },
           {
-            "fieldPath": "win",
-            "columnName": "win",
+            "fieldPath": "outcome",
+            "columnName": "outcome",
             "affinity": "INTEGER",
             "notNull": true
           },
           {
-            "fieldPath": "lose",
-            "columnName": "lose",
+            "fieldPath": "player",
+            "columnName": "player",
             "affinity": "INTEGER",
             "notNull": true
           },
           {
-            "fieldPath": "draw",
-            "columnName": "draw",
+            "fieldPath": "computer",
+            "columnName": "computer",
             "affinity": "INTEGER",
             "notNull": true
           },
           {
-            "fieldPath": "rock",
-            "columnName": "rock",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "paper",
-            "columnName": "paper",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "scissors",
-            "columnName": "scissors",
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
             "affinity": "INTEGER",
             "notNull": true
           }
@@ -106,185 +94,6 @@
               "user_id"
             ],
             "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_user_id` ON `${TABLE_NAME}` (`user_id`)"
-          },
-          {
-            "name": "index_Game_win",
-            "unique": false,
-            "columnNames": [
-              "win"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_win` ON `${TABLE_NAME}` (`win`)"
-          },
-          {
-            "name": "index_Game_lose",
-            "unique": false,
-            "columnNames": [
-              "lose"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_lose` ON `${TABLE_NAME}` (`lose`)"
-          },
-          {
-            "name": "index_Game_draw",
-            "unique": false,
-            "columnNames": [
-              "draw"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_draw` ON `${TABLE_NAME}` (`draw`)"
-          },
-          {
-            "name": "index_Game_rock",
-            "unique": false,
-            "columnNames": [
-              "rock"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_rock` ON `${TABLE_NAME}` (`rock`)"
-          },
-          {
-            "name": "index_Game_paper",
-            "unique": false,
-            "columnNames": [
-              "paper"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_paper` ON `${TABLE_NAME}` (`paper`)"
-          },
-          {
-            "name": "index_Game_scissors",
-            "unique": false,
-            "columnNames": [
-              "scissors"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Game_scissors` ON `${TABLE_NAME}` (`scissors`)"
-          }
-        ],
-        "foreignKeys": [
-          {
-            "table": "User",
-            "onDelete": "CASCADE",
-            "onUpdate": "NO ACTION",
-            "columns": [
-              "user_id"
-            ],
-            "referencedColumns": [
-              "user_id"
-            ]
-          }
-        ]
-      },
-      {
-        "tableName": "HistoricalData",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`historicaldata_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `wins` INTEGER NOT NULL, `losses` INTEGER NOT NULL, `draws` INTEGER NOT NULL, `rock` INTEGER NOT NULL, `paper` INTEGER NOT NULL, `scissors` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
-        "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "historicaldata_id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "userId",
-            "columnName": "user_id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "wins",
-            "columnName": "wins",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "losses",
-            "columnName": "losses",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "draws",
-            "columnName": "draws",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "rock",
-            "columnName": "rock",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "paper",
-            "columnName": "paper",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "scissors",
-            "columnName": "scissors",
-            "affinity": "INTEGER",
-            "notNull": true
-          }
-        ],
-        "primaryKey": {
-          "columnNames": [
-            "historicaldata_id"
-          ],
-          "autoGenerate": true
-        },
-        "indices": [
-          {
-            "name": "index_HistoricalData_user_id",
-            "unique": false,
-            "columnNames": [
-              "user_id"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_user_id` ON `${TABLE_NAME}` (`user_id`)"
-          },
-          {
-            "name": "index_HistoricalData_wins",
-            "unique": false,
-            "columnNames": [
-              "wins"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_wins` ON `${TABLE_NAME}` (`wins`)"
-          },
-          {
-            "name": "index_HistoricalData_losses",
-            "unique": false,
-            "columnNames": [
-              "losses"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_losses` ON `${TABLE_NAME}` (`losses`)"
-          },
-          {
-            "name": "index_HistoricalData_draws",
-            "unique": false,
-            "columnNames": [
-              "draws"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_draws` ON `${TABLE_NAME}` (`draws`)"
-          },
-          {
-            "name": "index_HistoricalData_rock",
-            "unique": false,
-            "columnNames": [
-              "rock"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_rock` ON `${TABLE_NAME}` (`rock`)"
-          },
-          {
-            "name": "index_HistoricalData_paper",
-            "unique": false,
-            "columnNames": [
-              "paper"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_paper` ON `${TABLE_NAME}` (`paper`)"
-          },
-          {
-            "name": "index_HistoricalData_scissors",
-            "unique": false,
-            "columnNames": [
-              "scissors"
-            ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_HistoricalData_scissors` ON `${TABLE_NAME}` (`scissors`)"
           }
         ],
         "foreignKeys": [
@@ -305,7 +114,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a5ce0a5c85aea414da41c33385946d55')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '81bcfb359aae9532395ab28f438e5328')"
     ]
   }
 }

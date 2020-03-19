@@ -14,6 +14,9 @@ public class CanYouBeatRpsApplication extends Application {
     Stetho.initializeWithDefaults(this);
     GoogleSignInRepository.setContext(this);
     CanYouBeatRpsDatabase.setContext(this);
+    CanYouBeatRpsDatabase.getInstance().getGameDao().delete()
+        .subscribeOn(Schedulers.io())
+        .subscribe();
 
   }
 }

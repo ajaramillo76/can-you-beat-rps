@@ -9,12 +9,5 @@ import edu.cnm.deepdive.canyoubeatrps.R;
 
 public class GameFragment extends Fragment {
 
-  public enum Player {
-    ROCK, PAPER, SCISSORS
-  }
-
-  public enum Computer {
-    ROCK, PAPER, SCISSORS
-  }
 
 }

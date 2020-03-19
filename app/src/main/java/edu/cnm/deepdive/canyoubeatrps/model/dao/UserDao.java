@@ -17,16 +17,16 @@ import java.util.List;
 public interface UserDao {
 
   @Insert
-  long insert(User user);
+  Single<Long> insert(User user);
 
   @Insert
   Single<List<Long>> insert(Collection<User> users);
 
   @Update
-  int update(User user);
+  Single<Integer> update(User... users);
 
   @Delete
-  int delete(User... users);
+  Single<Integer> delete(User... users);
 
   @Query("SELECT * FROM User ORDER BY user_id")
   LiveData<List<User>> select();
