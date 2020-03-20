@@ -1,19 +1,19 @@
 package edu.cnm.deepdive.canyoubeatrps.controller;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.navigation.NavController;
 import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import android.widget.Button;
 import edu.cnm.deepdive.canyoubeatrps.R;
 import edu.cnm.deepdive.canyoubeatrps.service.GoogleSignInRepository;
 
@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
   private NavController navController;
   private NavOptions navOptions;
+  private GameActivity gameActivity;
+  private Button button;
+  private Button button1;
 
 
   @Override
@@ -28,24 +31,19 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     Button button = findViewById(R.id.start_button);
-    Button button2 = findViewById(R.id.how_to_button);
-
+    Button button1 = findViewById(R.id.how_to_button);
     button.setOnClickListener(
-        new Button.OnClickListener() {
+        new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-            TextView statusText = findViewById(R.id.start_button);
-            statusText.setText("Game play coming soon");
+            openGameActivity();
           }
         });
-    button2.setOnClickListener(
-        new Button.OnClickListener() {
-          public void onClick(View v) {
-            TextView statusText = findViewById(R.id.how_to_button);
-            statusText.setText("How To coming soon");
-          }
-        }
-    );
+  }
+
+  public void openGameActivity() {
+    Intent intent = new Intent(this, GameActivity.class);
+    startActivity(intent);
   }
 
   @Override
@@ -83,9 +81,14 @@ public class MainActivity extends AppCompatActivity {
             .build();
     navController = Navigation.findNavController(this, R.id.nav_host_fragment);
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-      return true;
+    return true;
   }
 
+  private void switchToGame() {
+    Intent intent = new Intent(this, GameActivity.class);
+    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+    startActivity(intent);
+  }
 
 
 }

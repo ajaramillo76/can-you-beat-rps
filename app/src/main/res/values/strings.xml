@@ -4,4 +4,7 @@
   <string name="login_failure">\"Unable to sign in with the provided credentials\"</string>
   <string name="how_to_play">\How To Play</string>
   <string name="sign_out">sign_out</string>
+  <string name="play_again">Play Again?</string>
+  <string name="you_win">You Win</string>
+  <string name="make_your_choice">Make Your Choice</string>
 </resources>

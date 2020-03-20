@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.canyoubeatrps.model;
+package edu.cnm.deepdive.canyoubeatrps.model.pojo;
 
 import androidx.room.Relation;
 import edu.cnm.deepdive.canyoubeatrps.model.entity.Game.Choice;
