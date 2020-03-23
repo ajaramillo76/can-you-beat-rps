@@ -8,7 +8,7 @@
   <fragment
     android:id="@+id/navigation_start"
     android:label="Start"
-    android:name="edu.cnm.deepdive.canyoubeatrps.controller.GameFragment"
+    android:name="edu.cnm.deepdive.canyoubeatrps.controller.GameActivity"
     tools:layout="@layout/activity_main"/>
 
 </navigation>

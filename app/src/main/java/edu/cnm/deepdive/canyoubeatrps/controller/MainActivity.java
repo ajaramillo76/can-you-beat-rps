@@ -17,7 +17,7 @@ import androidx.navigation.ui.NavigationUI;
 import edu.cnm.deepdive.canyoubeatrps.R;
 import edu.cnm.deepdive.canyoubeatrps.service.GoogleSignInRepository;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
 
   private NavController navController;
   private NavOptions navOptions;
@@ -72,23 +72,8 @@ public class MainActivity extends AppCompatActivity {
     return handled;
   }
 
-  private boolean setupNavigation() {
-    navOptions = new NavOptions.Builder()
-        .setPopUpTo(R.id.navigation_map, true)
-        .build();
-    AppBarConfiguration appBarConfiguration =
-        new AppBarConfiguration.Builder(R.id.navigation_start)
-            .build();
-    navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-    NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-    return true;
+  @Override
+  public void onClick(View v) {
+
   }
-
-  private void switchToGame() {
-    Intent intent = new Intent(this, GameActivity.class);
-    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
-  }
-
-
 }
