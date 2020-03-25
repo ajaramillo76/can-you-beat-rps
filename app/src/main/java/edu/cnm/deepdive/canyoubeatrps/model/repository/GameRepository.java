@@ -1,7 +1,16 @@
 package edu.cnm.deepdive.canyoubeatrps.model.repository;
 
 import android.app.Application;
+import androidx.lifecycle.LiveData;
+import edu.cnm.deepdive.canyoubeatrps.model.dao.GameDao;
+import edu.cnm.deepdive.canyoubeatrps.model.entity.Game;
+import edu.cnm.deepdive.canyoubeatrps.model.pojo.UserSummary;
 import edu.cnm.deepdive.canyoubeatrps.service.CanYouBeatRpsDatabase;
+import io.reactivex.Single;
+import io.reactivex.SingleSource;
+import io.reactivex.schedulers.Schedulers;
+import java.util.Date;
+import java.util.List;
 
 public class GameRepository {
 
@@ -28,6 +37,13 @@ public class GameRepository {
     GameRepository.context = context;
   }
 
+  public static GameRepository getInstance() {
+    return InstanceHolder.INSTANCE;
+  }
+
+  public LiveData<List<UserSummary>> get() {
+    return database.getGameDao().selectAllSummaries();
+  }
   private static class InstanceHolder {
 
     private static final GameRepository INSTANCE = new GameRepository();

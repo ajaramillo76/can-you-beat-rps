@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".controller.GameActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@color/colorAccent1">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/colorFont"
+      android:gravity="end"
+      android:text="@string/loss"
+      android:textSize="14sp" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/colorFont"
+      android:padding="12dp"
+      android:text="@string/total_losses"
+      android:textSize="22sp"
+      android:id="@+id/loss"
+      />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.5"
+    android:gravity="center"
+    >
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textColor="@color/colorFont1"
+      android:textSize="84sp"
+      android:text="@string/message"
+      android:id="@+id/message"
+      />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="1.0">
+
+
+      <Button
+        android:id="@+id/rock"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:textColor="@color/colorFont1"
+        android:text="@string/rock"
+        android:textStyle="bold"/>
+
+      <Button
+        android:id="@+id/paper"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.34"
+        android:textColor="@color/colorFont1"
+        android:text="@string/paper"
+        android:textStyle="bold"/>
+
+      <Button
+        android:id="@+id/scissors"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:textColor="@color/colorFont1"
+        android:text="@string/scissors"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:background="@color/colorAccent1"
+      >
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFont"
+        android:gravity="end"
+        android:text="@string/win_rate"
+        android:textSize="14sp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFont"
+        android:padding="12dp"
+        android:text="@string/number_wins"
+        android:textSize="22sp"
+        android:id="@+id/win_rate"
+        />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFont"
+        android:gravity="start"
+        android:text="@string/percent_of_games"
+        android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:background="@color/colorAccent1"
+      android:padding="12dp">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="end"
+          android:text="@string/player"
+          android:textColor="@color/colorFont"
+          />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="end"
+          android:text="@string/computer"
+          android:textColor="@color/colorFont"
+          />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/player_action_5"
+          />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/robot_action_5"
+          />
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        android:textColor="@color/colorFont"
+        />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/player_action_4"
+          />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/robot_action_4"
+          />
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        android:textColor="@color/colorFont"
+        />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/player_action_3"
+          />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/robot_action_3"
+          />
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        android:textColor="@color/colorFont"
+        />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/player_action_2"
+          />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/robot_action_2"
+          />
+
+      </LinearLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        android:textColor="@color/colorFont"
+        />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/player_action_1"
+          />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/blank_space"
+          android:textColor="@color/colorFont"
+          android:id="@+id/robot_action_1"
+          />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+</LinearLayout>
