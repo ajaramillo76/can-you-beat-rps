@@ -6,9 +6,6 @@ import edu.cnm.deepdive.canyoubeatrps.model.dao.GameDao;
 import edu.cnm.deepdive.canyoubeatrps.model.entity.Game;
 import edu.cnm.deepdive.canyoubeatrps.model.pojo.UserSummary;
 import edu.cnm.deepdive.canyoubeatrps.service.CanYouBeatRpsDatabase;
-import io.reactivex.Single;
-import io.reactivex.SingleSource;
-import io.reactivex.schedulers.Schedulers;
 import java.util.Date;
 import java.util.List;
 

@@ -8,7 +8,6 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.OnLifecycleEvent;
 import edu.cnm.deepdive.canyoubeatrps.model.entity.Game;
-import edu.cnm.deepdive.canyoubeatrps.model.pojo.UserSummary;
 import edu.cnm.deepdive.canyoubeatrps.model.repository.GameRepository;
 import edu.cnm.deepdive.canyoubeatrps.service.CanYouBeatRpsService;
 import io.reactivex.disposables.CompositeDisposable;
@@ -49,11 +48,10 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     );
   }
 
-  @SuppressWarnings("unused")
-  @OnLifecycleEvent(Event.ON_STOP)
-  private void disposePending() {
-    pending.clear();
+    @SuppressWarnings("unused")
+    @OnLifecycleEvent(Event.ON_STOP)
+    private void disposePending () {
+      pending.clear();
+    }
+
   }
-
-
-}
